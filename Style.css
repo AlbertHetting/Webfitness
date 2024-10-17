@@ -1,0 +1,509 @@
+
+:root {
+    --bgcol: #020f1f;
+    --navcol: #06254d;
+    --logolight: #0C4DA2;
+    --logodark: #051F5F;
+    --lightblue: #1275f7;
+    --footershade: #020c19;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: var(--bgcol);
+}
+
+#logo {
+    position: fixed;
+    z-index: 2;
+    max-width: 100px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#logo:hover{
+    cursor: pointer;
+}
+
+/* Styling af menu/navbar */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--navcol);
+    padding: 10px 7%;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+header .navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 150px;
+}
+
+header .navigation ul li {
+    position: relative;
+    display: inline-block;
+    padding: 15px 0; 
+}
+
+header .navigation ul li a {
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: inline-flex; 
+    align-items: center;
+    position: relative;
+}
+
+/* Animation af underline */
+header .navigation ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: var(--lightblue);
+    left: 0;
+    bottom: -2px; 
+    transition: width 0.3s ease-in-out;
+}
+
+header .navigation ul li a:hover::after {
+    width: 100%; 
+}
+
+header .navigation ul li ul li a {
+    text-decoration: none;
+}
+
+header .navigation ul li ul {
+    position: absolute;
+    width: 160px;
+    background: var(--navcol);
+    display: none;
+}
+
+/* Pop up af submenuer */
+header .navigation ul li:focus-within > ul,
+header .navigation ul li:hover > ul {
+    display: block;
+}
+
+header label {
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+#box {
+    display: none;
+}
+
+#mainimg{
+    max-width: 100%;
+    position: relative;
+    margin-top: 75px;
+}
+
+main .maintext{
+    margin-top: 50px;
+    display: inline-flex;
+    flex-direction: row;
+    gap: 70px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+
+main .maintext h1{
+    color: white;
+    margin-bottom: 5px;
+}
+
+#infoimg1{
+    max-width: 30%;
+}
+
+main .maintext p{
+    color: white;
+    max-width: 420px;
+    font-size: 22px;
+}
+
+footer{
+    bottom: 0px;
+    border-top: black, 5px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--footershade);
+    height: 120px;
+}
+footer h2{
+    color: white;
+    font-size: 20px;
+}
+
+footer div p{
+    color: white;
+}
+
+
+/* Guide page Styling */
+
+#guideimg{
+    max-width: 100%;
+    position: relative;
+    margin-top: 75px;
+}
+
+main .guidecatch {
+    display: flex;
+    justify-content: center; 
+    flex-direction: column; 
+    color: white;
+    text-align: center;
+    max-width: 1000px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+#mainimg{
+    max-width: 100%;
+    position: relative;
+    margin-top: 75px;
+}
+
+main .Guidetext{
+    margin-top: 30px;
+    display: inline-flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+#guidesum p{
+    font-size: 25px;
+    max-width: 600px;
+}
+
+
+main .Guidetext h1{
+    color: white;
+    margin-bottom: 5px;
+}
+
+#infoimg1{
+    max-width: 30%;
+}
+
+main .Guidetext p{
+    color: white;
+}
+
+#guideartikel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#guideartikel h2{
+    color: white;
+    margin-bottom: 20px;
+    font-size: 25px;
+text-align: center;
+}
+
+#guideartikel p{
+    color: white;
+    font-size: 18px;
+}
+
+#guideartikel h3{
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 25px;
+}
+
+#infoimg2{
+    max-width: 30%;
+}
+
+.guideend{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+
+.guideend h2{
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.guideend p{
+    color: white;
+    max-width: 600px;
+    text-align: center;
+    font-size: 18px;
+}
+
+#redirection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 70px;
+}
+
+#redirection h2{
+    color: white;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#redirection p{
+    color: white;
+    font-size: 20px;
+}
+
+
+
+/* Styling af Nyheder */
+
+#newsimg{
+    max-width: 100%;
+    margin-top: 75px;
+}
+
+
+.signup{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+.signup h1{
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.signup form{
+    align-self: center;
+}
+
+.signup label{
+    color: white;
+}
+
+#Signupform{
+    max-width: 400px;
+    border: 10px solid color var(--footershade);
+    input, textarea{
+        display: block;
+        width: 100%;
+    }
+}
+
+#sendbtn{
+    margin-top: 5px;
+    border: 0px;
+    background: var(--lightblue);
+    Color: white;
+}
+
+#sendbtn:hover{
+    cursor: pointer;
+}
+
+#nyheder1{
+    max-width: 400px;
+    position: relative;
+}
+
+.mainnews{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+}
+
+.textstyle h1{
+    color: white;
+    margin-bottom: 20px;
+    
+}
+
+.textstyle p{
+    max-width: 550px;
+    color: white;
+    font-size: 22px;
+}
+
+#nyheder2{
+    max-width: 400px;
+    position: relative;
+}
+
+.mainnews2{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+
+    margin-bottom: 30px;
+}
+
+
+
+/* Style af Submitpage */
+
+main .submitaffirm{
+    margin-top: 20px;
+}
+
+.submitaffirm{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.submitaffirm h1{
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.submitaffirm form{
+    align-self: center;
+}
+
+.submitaffirm label{
+    color: white;
+    text-align: center;
+}
+
+#newsimgsub{
+    display: block;
+}
+
+
+
+/* Styling af Tilgang */
+
+#tilgangimg{
+    max-width: 100%;
+    margin-top: 75px;
+}
+
+#tilganginfo{
+    max-width: 500px;
+}
+
+main .tilarticle{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 50px;
+    margin-bottom: 30px;
+}
+
+main .tilarticle p{
+    color: white;
+    max-width: 600px;
+    font-size: 22px;
+}
+main .tilarticle h1{
+    color: white;
+    margin-bottom: 15px;
+    font-size: 35px;
+}
+
+.midtil{
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.midtil2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+
+}
+.midtil h1{
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.midtil2 p{
+    color: white;
+    font-size: 22px;
+    text-align: center;
+}
+
+#tilganginfo2{
+    max-width: 500px;
+    height: 100%;
+}
+
+main .tilarticle2{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    gap: 50px;
+    margin-bottom: 30px;
+}
+
+main .tilarticle2 p{
+    color: white;
+    max-width: 600px;
+    font-size: 22px;
+}
+main .tilarticle2 h1{
+    color: white;
+    margin-bottom: 15px;
+    font-size: 35px;
+}
